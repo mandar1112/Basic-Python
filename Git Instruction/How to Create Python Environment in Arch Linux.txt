@@ -1,0 +1,11 @@
+cd /home/mandar1112/Desktop/Coding/Python/Basic/    //This is the location of the folder where you need to create a python environment for specific version
+
+pyenv local 3.12.12
+
+pyenv rehash
+
+python --version
+
+python -m venv venv
+
+source venv/bin/activate

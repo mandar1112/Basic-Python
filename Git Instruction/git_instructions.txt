@@ -1,0 +1,47 @@
+# Git Guide: Push, Update, Download
+
+PART 1 — How to PUSH Files or Folders to GitHub
+
+Step 1: Go to the project folder
+cd D:\Coding\Python\Basic
+
+Step 2: Initialize Git (only once)
+git init
+
+Step 3: Connect your GitHub repo
+git remote add origin <your-repo-link>
+
+Step 4: Check what files changed
+git status
+
+Step 5: Add files (stage them)
+git add .
+
+Step 6: Commit the changes
+git commit -m "your message"
+
+Step 7: Push to GitHub
+git push -u origin main
+(next time just git push)
+
+-----------------------------------
+
+PART 2 — How to UPDATE your project on GitHub
+
+1. git status
+2. git add .
+3. git commit -m "updated"
+4. git push
+
+-----------------------------------
+
+PART 3 — How to DOWNLOAD from GitHub
+
+Method 1 — Clone (recommended)
+git clone <repo-link>
+
+Method 2 — Download ZIP
+GitHub → Code → Download ZIP
+
+Method 3 — Pull updates (only if you cloned)
+git pull
