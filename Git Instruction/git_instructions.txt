@@ -15,7 +15,7 @@ Step 4: Check what files changed
 git status
 
 Step 5: Add files (stage them)
-git add .
+git add .                                         git rm -r --cached venv ==> To remove any file from git
 
 Step 6: Commit the changes
 git commit -m "your message"

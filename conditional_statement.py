@@ -39,6 +39,7 @@ else:
 print("Thank you!")
 
 
+
 # if elif else Block
 
 marks = int(input("Enter your marks: "))
@@ -53,3 +54,26 @@ elif marks >= 40:
     print("Grade D")
 else:
     print("Grade F - Fail")
+
+
+
+# Nested if Block
+
+marks = int(input("Enter The Marks: "))
+if marks >= 50:
+    if marks >= 90:
+        print("Grade A")
+    elif 80 <= marks < 90:
+        print("Grade B")
+    elif 70 <= marks < 80:
+        print("Grade C")
+    elif 60 <= marks < 70:
+        print("Grade D")
+    else:
+        print("Grade E")
+else: 
+    print("Failed in Exam.")
+
+
+
+# Ternary Operator is on ternary_operator.py file
