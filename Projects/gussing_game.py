@@ -1,23 +1,34 @@
 import random
 
 def guessing_game():
-    number_to_guess = random.randint(1,10)
-    user_guess = None
-    attempts = 1
-    max_attempts = 5
-    while user_guess != number_to_guess and attempts < max_attempts:
+    number_to_guess = random.randint(1, 10)
+    
+    choice = int(input("Choose a difficulty level (1: Easy, 2: Medium, 3: Hard): "))
+    match choice:
+        case 1:
+            attempts = 5
+        case 2:
+            attempts = 3
+        case 3:
+            attempts = 1
+        case _:
+            print("Invalid choice, defaulting to choose Easy Di attempts.")
+            attempts = 5
+
+    while attempts > 0:
         user_guess = int(input("Guess a number between 1 and 10: "))
         if user_guess < number_to_guess:
-            print("You guess is lower han the number.")
+            print("Your guess is lower than the number.")
         elif user_guess > number_to_guess:
             print("Your guess is higher than the number.")
         else:
             print("Congratulations! You've guessed the number.")
-            break
-        max_attempts -= 1
-        print(f"You have {max_attempts} attempts left.")
-    if attempts == max_attempts and user_guess != number_to_guess:
-        print(f"Sorry, you've used all attempts. The number was {number_to_guess}.")
+            return
+        
+        attempts -= 1
+        print(f"You have {attempts} attempts left.\n")
+    
+    print(f"Sorry, you've used all attempts. The number was {number_to_guess}.")
 
 def main():
     guessing_game()
