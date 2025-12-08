@@ -10,6 +10,7 @@ my_dict = {
 print("Name:", my_dict["name"])
 print("Age:", my_dict.get("age"))
 print("City:", my_dict["city"])
+
 # Adding a new key-value pair
 my_dict["job"] = "Engineer"
 print("Updated Dictionary:", my_dict)
@@ -61,7 +62,7 @@ total_score_Std2 = sum(Std2.values())
 print("Total Score of Student 1:", total_score_Std1)
 print("Total Score of Student 2:", total_score_Std2)
  
- #POP Method
+#POP Method
 removed_score = Std1.pop("Art", "Not Found")
 print("Removed Score:", removed_score)          
 
