@@ -1,0 +1,73 @@
+# JSON is used in api's ,datastorage, etc.
+"""
+JSON supports:
+    dict, list, tuple, str, int, float, bool, None
+"""
+import json
+
+studentss = {'student1':{'roll': 101, 'name': 'John', 'percent': 98.5, 'sport': True}, 
+            'student2':{'roll': 102, 'name': 'Carol', 'percent': 92.5, 'sport': False},
+            'student3':{'roll': 103, 'name': 'Carrie', 'percent': 89.5, 'sport': False},
+            'student4':{'roll': 104, 'name': 'Alice', 'percent': 81.5, 'sport': True}
+}
+students = {'student1':{'roll': 101, 'name': 'John', 'percent': 95.5, 'sport': False}, 
+            'student2':{'roll': 102, 'name': 'Carol', 'percent': 92.5, 'sport': False},
+            'student3':{'roll': 103, 'name': 'Alice', 'percent': 91.5, 'sport': True}
+}
+# print(students)
+# print(type(students))
+
+
+# dump() ==> Python to JSON
+# This is Serialization.
+
+# with open("Student_data.json", "w") as fh:
+    # json.dump(students, fh, indent=1)
+
+
+# load() ==> Use to read JSON File.
+# This is Deserialization.
+"""
+with open("Student_data.json", 'r') as fh:
+    data = json.load(fh)
+print(data)
+print(type(data))
+"""
+# update() ==> helps to add or update data
+# to update you need to read the data
+"""
+with open("Student_data.json", 'r') as fh:
+    data1 = json.load(fh)
+
+data1.update(studentss)
+"""
+# Now we will use dump() to update data in json
+"""
+with open("Student_data.json","w") as fh:
+    json.dump(data1, fh, indent=1)
+
+with open("Student_data.json", 'r') as fh:
+    data2 = json.load(fh)
+print(data2)
+print(type(data2))
+"""
+
+
+try:
+    # read the old data from the json file
+    with open("Student_data.json", "rt") as fh:
+        data3 = json.load(fh)
+    print("Json File Old Data: ",data3)
+except Exception as e:
+    print("Error: ",e)
+    data3 = {}
+finally:
+    # Update Data
+    data3.update(studentss)
+    print()
+    #dump() :- write the updated data in the json file.
+    with open("Student_data.json", "w") as fh:
+        json.dump(data3, fh, indent= 2)
+    print("Updated JSON data saved successfully.")
+
+
