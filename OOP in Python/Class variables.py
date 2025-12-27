@@ -24,4 +24,11 @@ class Student:
 
 
 student1 = Student("John", 1001)
-print(studen1.__dict__) # This will not show class variables. It will show instance variables
+print(student1.__dict__) # This will not show class variables. It will show instance variables
+
+
+print(student1.departments)
+print(student1.college_name)
+print(Student.departments)
+print(Student.college_name)
+

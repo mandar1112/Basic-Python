@@ -1,9 +1,8 @@
 # Initializer in Python
-# __init__() method
-
+# __init__() method 
+# Also called as Constructor
 # It is an instance method 
 # It is used to create and initialize the attributes during the object creation.
-
 
 class Student:
     """
