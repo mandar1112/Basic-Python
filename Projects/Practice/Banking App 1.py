@@ -165,7 +165,7 @@ class BankDatabase:
     FILE = "accounts.json"
 
     def __init__(self):
-        if os.path.exists(self.FILE:
+        if os.path.exists(self.FILE):
             with open(BankDatabase.FILE, "r") as fh:
                 raw = json.load(fh)
         else:
