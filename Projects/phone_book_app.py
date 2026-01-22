@@ -74,10 +74,8 @@ class Contact:
         #    return False
         return bool(fullmatch(r"\d{10}", number))
 
-class ContactSystem:
 
-    def __init__(self):
-        self.db = Contact()
+
 
 
 """
@@ -130,6 +128,11 @@ def main():
         
         case 2:
             name = input("Enter the Name to Search in Contact List: ")
+            Contact.search_contact(name)
+        
+        case 3:
+            name = input("Enter the Name to Delete in Contact List: ")
+            Contact.
 
 
 
