@@ -21,7 +21,7 @@
 """ Data Types in Python """
 """
 Text Type:	str
-Numeric Types:	int, float, complex
+Numeric Types:	int, float, complex, double  
 Sequence Types:	list, tuple, range
 Mapping Type:	dict
 Set Types:	set, frozenset
@@ -147,6 +147,7 @@ print(add)
 x = 10
 x += 99
 print(f"{x}")
+
 
 
 # 3. Comparison Operators
@@ -363,4 +364,4 @@ ends_with_world = text.endswith("World!")
 print(ends_with_world)  # Output: False
 
 
-# Basic of Python
+
